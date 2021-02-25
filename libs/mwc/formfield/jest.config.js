@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'cdk',
-  preset: '../../jest.preset.js',
+  displayName: 'mwc-formfield',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  coverageDirectory: '../../coverage/libs/cdk',
+  coverageDirectory: '../../../coverage/libs/mwc/formfield',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

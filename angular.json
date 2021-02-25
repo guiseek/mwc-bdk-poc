@@ -25,7 +25,8 @@
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "strict": true
     },
     "@nrwl/angular:component": {
       "style": "scss"
@@ -143,21 +144,21 @@
         }
       }
     },
-    "cdk": {
+    "mwc-formfield": {
       "projectType": "library",
-      "root": "libs/cdk",
-      "sourceRoot": "libs/cdk/src",
-      "prefix": "mwc-angular",
+      "root": "libs/mwc/formfield",
+      "sourceRoot": "libs/mwc/formfield/src",
+      "prefix": "mwc",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:package",
           "options": {
-            "tsConfig": "libs/cdk/tsconfig.lib.json",
-            "project": "libs/cdk/ng-package.json"
+            "tsConfig": "libs/mwc/formfield/tsconfig.lib.json",
+            "project": "libs/mwc/formfield/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/cdk/tsconfig.lib.prod.json"
+              "tsConfig": "libs/mwc/formfield/tsconfig.lib.prod.json"
             }
           }
         },
@@ -165,16 +166,53 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/cdk/src/**/*.ts",
-              "libs/cdk/src/**/*.html"
+              "libs/mwc/formfield/src/**/*.ts",
+              "libs/mwc/formfield/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/cdk"],
+          "outputs": ["coverage/libs/mwc/formfield"],
           "options": {
-            "jestConfig": "libs/cdk/jest.config.js",
+            "jestConfig": "libs/mwc/formfield/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "bdk": {
+      "projectType": "library",
+      "root": "libs/bdk",
+      "sourceRoot": "libs/bdk/src",
+      "prefix": "mwc-angular",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/bdk/tsconfig.lib.json",
+            "project": "libs/bdk/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/bdk/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/bdk/src/**/*.ts",
+              "libs/bdk/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/bdk"],
+          "options": {
+            "jestConfig": "libs/bdk/jest.config.js",
             "passWithNoTests": true
           }
         }

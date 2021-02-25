@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mwc-angular/cdk": ["libs/cdk/src/index.ts"]
+      "@mwc-angular/formfield": ["libs/mwc/formfield/src/index.ts"],
+      "@mwc-angular/bdk": ["libs/bdk/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

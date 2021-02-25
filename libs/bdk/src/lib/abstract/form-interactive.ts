@@ -1,9 +1,9 @@
 import {
+  Input,
+  Output,
   Directive,
   EventEmitter,
   HostBinding,
-  Input,
-  Output,
 } from '@angular/core'
 import { DefaultProp } from '../decorators'
 import { backValue } from '../utils/miscellaneous'
@@ -11,7 +11,8 @@ import { backValue } from '../utils/miscellaneous'
 const MWC = 'mwc_interactive_'
 
 /**
- * The most basic class for interactive components
+ * The most basic class for
+ * interactive components
  */
 @Directive()
 export abstract class AbstractFormInteractive {

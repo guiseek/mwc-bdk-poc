@@ -1,0 +1,10 @@
+
+mwc-textfield {
+  width: 100%;
+}
+pre {
+  padding: 9px;
+  border-radius: 4px;
+  background-color: black;
+  color: #eee;
+}

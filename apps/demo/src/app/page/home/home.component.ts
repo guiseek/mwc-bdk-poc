@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'mwc-angular-home',
@@ -8,18 +8,17 @@ import { FormBuilder } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   form = this.builder.group({
-    name: [{ value: 'Gui', disabled: true }],
+    name: ['oi', [
+      Validators.required
+    ]],
   });
   constructor(readonly builder: FormBuilder) {
     window.setTimeout(() => {
-      this.form.get('name').enable()
+      this.form.get('name').disable()
       window.setTimeout(() => {
-        this.form.get('name').disable()
-        window.setTimeout(() => {
-          this.form.get('name').enable()
-        }, 2500)
-      }, 2500)
-    }, 2500)
+        this.form.get('name').enable()
+      }, 10000)
+    }, 5000)
   }
 
   ngOnInit(): void {}

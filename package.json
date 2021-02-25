@@ -37,6 +37,7 @@
     "@angular/platform-browser": "^11.2.0",
     "@angular/platform-browser-dynamic": "^11.2.0",
     "@angular/router": "^11.2.0",
+    "@material/mwc-formfield": "^0.20.0",
     "@material/mwc-textfield": "^0.20.0",
     "@nrwl/angular": "11.3.0",
     "rxjs": "~6.6.3",

@@ -74,7 +74,7 @@ export function DefaultProp<T extends object, K extends keyof T>(
 function errorGetDefault(key: string | symbol, component: string): string {
   return `Default value for ${String(
     key
-  )} was not provided in ${component}, error in Taiga UI Angular Kit`
+  )} was not provided in ${component}, error in MWC Behavior Development Kit`
 }
 
 function errorSetDefault(key: string | symbol, component: string): string {
@@ -89,5 +89,5 @@ function errorSetDefaultInitial(
 ): string {
   return `Undefined was passed as default value for ${String(
     key
-  )} to ${component}, error in Taiga UI Angular Kit`
+  )} to ${component}, error in MWC Behavior Development Kit`
 }

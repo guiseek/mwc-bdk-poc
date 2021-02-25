@@ -39,7 +39,7 @@ export abstract class AbstractFormControl<T>
   protected readonly destroy$ = new Subject<void>()
 
   @Input()
-  @HostBinding('class._readonly')
+  @HostBinding('class.readonly')
   @DefaultProp()
   readOnly = false
 
@@ -48,7 +48,7 @@ export abstract class AbstractFormControl<T>
   pseudoInvalid: boolean | null = null
 
   protected constructor(
-    private readonly ngControl: NgControl | null,
+    protected readonly ngControl: NgControl | null,
     protected readonly changeDetectorRef: ChangeDetectorRef
   ) {
     super()
@@ -64,7 +64,7 @@ export abstract class AbstractFormControl<T>
     }
   }
 
-  @HostBinding('class._invalid')
+  @HostBinding('class.invalid')
   get computedInvalid(): boolean {
     return (
       !this.readOnly &&
