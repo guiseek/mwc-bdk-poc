@@ -1,0 +1,10 @@
+<p>home works!</p>
+
+<form [formGroup]="form">
+  <mwc-textfield
+    formControlName="name"
+    (valueChange)="onValueChange($event)"
+  ></mwc-textfield>
+</form>
+
+<pre>{{form.value | json}}</pre>
